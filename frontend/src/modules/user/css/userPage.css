@@ -1,0 +1,11 @@
+#main{
+    
+  background-image: url('./bg_img01.jpg');
+  background-size:220vh 100vh;
+  background-repeat: no-repeat;
+}
+h2{
+    margin-top: 0px;
+    padding-top: 30px;
+}
+
