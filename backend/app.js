@@ -11,11 +11,11 @@ const app = express();
 app.use(cors());//cors middleware
 app.use(express.json())//json data fetch (next)
 app.use('/',userRoutes);
-//app.use('/',ideRoutes);
+app.use('/',ideRoutes);
 //last middleware 404 - for handling invalid requests
 app.use((request , response , next)=>{
     response.json({message:'Invalid URL'});
-})
+}) 
 const server = app.listen(1234,(err)=>{
     if(err){
         console.log('server crash',err);

@@ -11,7 +11,7 @@ const UserPage = () => {
   return (
     <>
     <div id='main'>
-    <h2>WELCOME to our ONLINE IDE </h2>
+    <h2 className='dynamic-heading'>WELCOME to our ONLINE CODE IDE </h2>
        <Container>
         <Grid container spacing={2}>
         <Grid item xs={6}>
@@ -21,8 +21,6 @@ const UserPage = () => {
           <Register/>
         </Grid>
         </Grid>
-
-
         </Container>
         </div>
     </>

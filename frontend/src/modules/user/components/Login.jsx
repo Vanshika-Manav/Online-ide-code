@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/login.css';
+import axios from 'axios';
 import { useRef , useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Container from '@mui/material/Container';
@@ -24,6 +25,14 @@ const Login = () => {
         const response = await apiClient.post(process.env.REACT_APP_LOGIN,userInfo);
         setMessage(response.data.message);
         setIsAuthenticated(true);
+        try{
+          const response = await axios.post('http://localhost:1234/uploadquestions');
+          console.log(response);
+        }
+        catch(error){
+          console.log(error);
+          console.log("Questions not inserted to database...");
+        }
 
        }
        catch(err){

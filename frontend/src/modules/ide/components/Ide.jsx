@@ -1,9 +1,7 @@
 import React,{useRef} from 'react';
 import Editor from '@monaco-editor/react';
 import Button from '@mui/material/Button';
-import { apiClient } from '../../../shared/services/api-client.js';
-
-
+import axios from 'axios';
  export const Ide = () => {
     const editorRef = useRef(null);
     const mount =(editor)=>{
@@ -11,17 +9,18 @@ import { apiClient } from '../../../shared/services/api-client.js';
     }
     const getCode = async  ()=>{
         const code = editorRef.current.getValue();
-        console.log('Code is',code);
-        const jsonObject = {"code":code};
+        console.log('Code is',code);   
+        const jsonObject = {
+            "problem_solution":code};
         try{
-            const response = await apiClient.post(process.env.REACT_APP_CODE_URL,jsonObject);
-            console.log('Response is',response);
+        const res = await axios.post('http://localhost:1234/submits',jsonObject);
+        console.log('code posted to database successfully',res);
+        alert("Problem solution saved to database successfully!");
         }
-        catch(err){
-            console.log('Error during code submission',err);
+        catch(error){
+            console.log(error);
+            console.log('code failed to post on db');
         }
-        
-
     }
     const skeletonCode = `
     class Solution{
@@ -29,7 +28,6 @@ import { apiClient } from '../../../shared/services/api-client.js';
             return x+y;
         }
     }
-    
     `
   return (
     <>
@@ -40,7 +38,7 @@ import { apiClient } from '../../../shared/services/api-client.js';
         defaultValue={skeletonCode}
        
       />
-      <Button onClick={getCode} variant="contained">Submit Code </Button>
+      <Button onClick={getCode}  variant="contained">Submit Code </Button>
       </>
   )
 }

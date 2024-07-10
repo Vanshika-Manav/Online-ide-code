@@ -6,6 +6,76 @@
 }
 h2{
     margin-top: 0px;
-    padding-top: 30px;
+    padding-top: 15px;
 }
+ol{
+  color:black;
+}
+.container{
+  margin-top: 65px;
+}
+#ques-button:hover{
+  color:black;
+  font-size: 18px;
+}
+
+.dynamic-heading {
+  font-size: 30px;
+  color:  #3498db;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.dynamic-heading::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color:black ;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.dynamic-heading:hover {
+  color:black;
+  font-size: 35px;
+}
+
+.dynamic-heading:hover::before {
+  width: 100%;
+  left: 0;
+}
+.dynamic-heading2 {
+  font-size: 30px;
+  color:black;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.dynamic-heading2::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color :#3498db ;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.dynamic-heading2:hover {
+  color: #3498db;
+}
+
+.dynamic-heading2:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+
 
