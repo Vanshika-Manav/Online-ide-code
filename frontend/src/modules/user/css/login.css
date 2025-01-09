@@ -1,6 +1,4 @@
-
-
-.font-login{
+.font-login ,.font-register{
     color:black;
     padding:50px;
     width: 100%;
@@ -11,17 +9,7 @@
     text-align: center;
     justify-content:center;
   }
-  .font-register{
-    color:black;
-    padding:50px;
-    width: 100%;
-    margin-left:55vh;
-    font-size: 130%;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bolder;
-    text-align: center;
-    justify-content: center;
-  }
+
   p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
@@ -32,10 +20,7 @@
   h2{
     text-align: center;
   }
-  #login {
-    margin: 30px;
-  }
-  #register{
+  #login ,#register {
     margin: 30px;
   }
   #standard-basic{

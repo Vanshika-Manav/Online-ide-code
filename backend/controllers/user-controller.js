@@ -24,16 +24,8 @@ export const userController = {
             console.log('Login Error',err);
             response.json({message:'Problem in Login'});
         }
-        
-        // console.log('Request body is : ', userInfo);
-        // if(userInfo.userid == userInfo.password){
-        //     response.json({message:'welcome ' + userInfo.userid});
-        // }
-        // else{
-        //     response.json({message:'Invalid userid or password'});
-        // }
-        
     },
+    
     async register(request , response){
         const userInfo = request.body;
         userInfo.password = hashing.passwordHash (userInfo.password);

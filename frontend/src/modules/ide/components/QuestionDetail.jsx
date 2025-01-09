@@ -31,8 +31,6 @@ function QuestionDetail() {
       <h3>{question.problem_statement}</h3>
       {question.problem_description}
       <h4>Level</h4>{question.level}
-
-      {/* <pre>{question.sample_code}</pre> */}
     </div>
   );
 }

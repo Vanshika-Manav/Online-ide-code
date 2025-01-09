@@ -12,7 +12,6 @@ export const QuestionPage = ()=>{
         <Header/>
         <Grid container spacing={0}>
         <Grid item xs={6}>
-          {/* Question - problem statements */}
           <QuestionDetail/>
         </Grid>
         <Grid item xs={6}>

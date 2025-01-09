@@ -44,15 +44,6 @@ export const ideController = {
           }
     },
     async submit(request, response){
-            // try {
-            //     const { code_id, question_id, problem_solution } = request.body;
-            //     const newCodeSubmit = new CodeModel({ code_id, question_id, problem_solution });
-            //     await newCodeSubmit.save();
-            //     response.status(201).json(newCodeSubmit);
-            //   } catch (error) {
-            //     console.error('Error saving code submit:', error);
-            //     response.status(500).json({ error: 'Server error' });
-            //   }
             try {
                 const { ref_quesid, problem_solution } = request.body;
                 const codeSubmitted = new CodeModel({

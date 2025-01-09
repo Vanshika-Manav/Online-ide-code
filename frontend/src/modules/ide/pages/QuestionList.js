@@ -16,7 +16,6 @@ function App() {
       try {
         const response = await axios.get('http://localhost:1234/questions');
         console.log(response); // Check the response structure
-        //  
         if (Array.isArray(response.data)) {
           setQuestions(response.data);
         } else {
@@ -36,13 +35,9 @@ function App() {
       <ol>
         {questions.map(question => (
           <li key={question._id}>
-          {/* console.log(`Navigating to question ID: ${question._id}`); */}
           <h2><Button onClick={() => navigate(`/question/${question._id}`)} id='ques-button'>
                 <h4>{question.problem_statement}</h4>
               </Button></h2>
-            {/* <p>{question.problem_description}</p>
-            <pre>{question.sample_code}</pre>
-            <h4>Level:{question.level}</h4> */}
           </li>
         ))}
       </ol>
